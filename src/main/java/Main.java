@@ -1,7 +1,7 @@
 public class Main {
 
     public static void main(String[] args) {
-        Customer customer = new Customer("Frodo", "Balings", new MasterCard(0));
+        Customer customer = new Customer("Frodo", "Balings", new MasterCard(0), "frodo@novi.nl");
         customer.getCreditCard().pay(100);
         customer.printName();
         System.out.println(customer.getCreditCard().getDebt());

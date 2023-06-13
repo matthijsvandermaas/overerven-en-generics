@@ -1,20 +1,25 @@
 public abstract class CreditCard {
+    private int debt;
 
-		private int debt;
+    public CreditCard(int debt) {
+        this.debt = debt;
+    }
 
-		public CreditCard(int debt) {
-				this.debt = debt;
-		}
+    public void pay(int amount) {
+        this.debt += amount;
+    }
 
-		public void pay(int amount){
-				this.debt = this.debt + amount;
-		}
+    public int getDebt() {
+        return debt;
+    }
 
-		public int getDebt() {
-				return debt;
-		}
+    public void setDebt(int debt) {
+        this.debt = debt;
+    }
 
-		public void setDebt(int debt) {
-				this.debt = debt;
-		}
+    interface ContactInfo {
+        void sendMessage();
+    }
+
+
 }
